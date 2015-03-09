@@ -2,6 +2,7 @@
     <wb-module deploy-name="jspPractice">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/loader"/>
         <property name="context-root" value="jspPractice"/>
         <property name="java-output-path" value="/jspPractice/build/classes"/>
     </wb-module>

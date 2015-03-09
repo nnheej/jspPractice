@@ -24,13 +24,13 @@
 			ResultSet rs = null;
 
 			try {
-				String jdbcDriver = "jdbc:mysql://localhost:3306/test";
-				String dbUser = "jspexam";
-				String dbPass = "jspex";
+				String jdbcDriver = "jdbc:apache:commons:dbcp:/pool";
+				//String dbUser = "jspexam";
+				//String dbPass = "jspex";
 				String query = "select * from MEMBER order by MEMBERID";
 
 				//2. 单捞磐海捞胶 目池记 积己
-				conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
+				conn = DriverManager.getConnection(jdbcDriver);
 
 				//3. statement 积己
 				stmt = conn.createStatement();

@@ -7,7 +7,7 @@
 <head>
 <link type="text/css" href="css/mainStyle.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>HOMEPAGE</title>
 </head>
 <body>
 	<div class="mainDiv" width="document.body.clientWidth"

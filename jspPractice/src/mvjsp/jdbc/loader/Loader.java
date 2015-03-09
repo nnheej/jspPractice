@@ -1,4 +1,4 @@
-package jspPractice;
+package mvjsp.jdbc.loader;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

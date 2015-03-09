@@ -5,7 +5,17 @@
 	version="3.1">
 	<servlet>
 		<servlet-name>JDBCDriverLoader</servlet-name>
-		<servlet-class>jspPractice.Loader</servlet-class>
+		<servlet-class>mvjsp.jdbc.loader.Loader</servlet-class>
+		<init-param>
+			<param-name>jdbcdriver</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DBCPInit</servlet-name>
+		<servlet-class>mvjsp.jdbc.loader.DBCPInit</servlet-class>
 		<init-param>
 			<param-name>jdbcdriver</param-name>
 			<param-value>com.mysql.jdbc.Driver</param-value>
