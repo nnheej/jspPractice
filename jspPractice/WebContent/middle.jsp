@@ -1,3 +1,5 @@
+<%@page import="mvjsp.jdbc.connection.ConnectionProvider"%>
+<%@page import="mvjsp.jdbc.jdbcUtil"%>
 <%@ page contentType="text/html; charset=euc-kr"%>
 <%@ page import="java.sql.*"%>
 
@@ -24,13 +26,13 @@
 			ResultSet rs = null;
 
 			try {
-				String jdbcDriver = "jdbc:apache:commons:dbcp:/pool";
+			//	String jdbcDriver = "jdbc:apache:commons:dbcp:/pool";
 				//String dbUser = "jspexam";
 				//String dbPass = "jspex";
 				String query = "select * from MEMBER order by MEMBERID";
 
 				//2. 데이터베이스 커넥션 생성
-				conn = DriverManager.getConnection(jdbcDriver);
+				conn = ConnectionProvider.getConnection();
 
 				//3. statement 생성
 				stmt = conn.createStatement();
@@ -54,9 +56,9 @@
 				ex.printStackTrace();
 			} finally {
 				//6. 사용한 statement connection 종료 
-				if(rs!=null)try{rs.close();}catch(SQLException ex){}
-				if(stmt!=null)try{stmt.close();}catch(SQLException ex){}
-				if(conn!=null)try{conn.close();}catch(SQLException ex){}
+				jdbcUtil.close(rs);
+				jdbcUtil.close(stmt);
+				jdbcUtil.close(conn);
 			}
 		%>
 	</table>
