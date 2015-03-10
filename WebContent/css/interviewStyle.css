@@ -1,0 +1,22 @@
+#title{
+	font-size:20px;
+	font-family:'나눔고딕';
+	font-weight:bold;
+	text-align:center;
+	width:100%;
+	display:inline-block;
+}
+.iconDiv{
+	width:100%;
+	display:block;
+}
+.icon{
+	display:inline;
+	font-family:'나눔고딕';
+	background-color:#3c69fd;	
+	padding:7px;
+	color:#f0f0f0;
+	font-weight:bold;
+	margin: 15px;
+}
+
