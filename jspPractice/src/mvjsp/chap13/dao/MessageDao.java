@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.List;
 import java.sql.PreparedStatement;
 
+import java.sql.Statement;
+
 import mvjsp.chap13.model.Message;
 import mvjsp.jdbc.jdbcUtil;
 
@@ -40,6 +42,19 @@ public abstract class MessageDao {
 		message.setPassword(rs.getString("password"));
 		message.setMessage(rs.getString("message"));
 		return message;
+	}
+	public int selectCount(Connection conn) throws SQLException{
+		Statement stmt = null;
+		ResultSet rs = null;
+		try{
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery("select count(*) from guestbook_message");
+			rs.next();
+			return rs.getInt(1);
+		}finally{
+			jdbcUtil.close(rs);
+			jdbcUtil.close(stmt);
+		}
 	}
 
 	public abstract List<Message> selectList(Connection conn, int firstRow,

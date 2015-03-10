@@ -22,4 +22,14 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>MessageDaoProviderInit</servlet-name>
+		<servlet-class>mvjsp.chap13.dao.MessageDaoProviderInit</servlet-class>
+		<init-param>
+			<param-name>dbms</param-name>
+			<param-value>mysql</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 </web-app>
