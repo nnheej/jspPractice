@@ -3,6 +3,17 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
+	<jsp-config>
+		<taglib>
+			<taglib-uri>/WEB-INF/tlds/el-functions.tld</taglib-uri>
+			<taglib-location>/WEB-INF/tlds/el-functions.tld</taglib-location>
+		</taglib>
+		<jsp-property-group>
+			<url-pattern>/jspPractice/*</url-pattern>
+			<el-ignored>true</el-ignored>
+		</jsp-property-group>
+	</jsp-config>
+	
 	<servlet>
 		<servlet-name>JDBCDriverLoader</servlet-name>
 		<servlet-class>mvjsp.jdbc.loader.Loader</servlet-class>
@@ -12,7 +23,7 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	
+
 	<servlet>
 		<servlet-name>DBCPInit</servlet-name>
 		<servlet-class>mvjsp.jdbc.loader.DBCPInit</servlet-class>
@@ -22,7 +33,7 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	
+
 	<servlet>
 		<servlet-name>MessageDaoProviderInit</servlet-name>
 		<servlet-class>mvjsp.chap13.dao.MessageDaoProviderInit</servlet-class>
@@ -32,4 +43,5 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	
 </web-app>

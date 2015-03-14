@@ -19,6 +19,6 @@
 <body>
 방명록에 메시지를 남겼습니다.
 <br/>
-<a href="list.jsp">[목록 보기]</a>
+<a href="first.jsp">[목록 보기]</a>
 </body>
 </html>

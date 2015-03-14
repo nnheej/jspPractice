@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<span id="title">열공하꾸다님의 열공 홈페이지</span>
+	<span id="title">test page</span>
 	<ul id="nav">
-		<li>HELLO</li>
+		<li><a href="first.jsp?pageName=hello">HELLO</a></li>
 		<li>USEFUL</li>
 		<li>STUDY</li>
 		<li>MEMO</li>
